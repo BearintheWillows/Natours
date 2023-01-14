@@ -8,19 +8,25 @@ Dark green: #28b485
 */
 
 
-* {
+*,
+*::after,
+*::before {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    box-sizing: inherit;
+}
+
+html {
+    font-size: 62.5%;
 }
 
 body {
     font-family: "Lato", sans-serif;
     font-weight: 400;
-    font-size: 16px;
     line-height: 1.7;
     color: #777;
-    padding: 30px;
+    padding: 3rem;
+    box-sizing: border-box;
 }
 
 .header {
@@ -39,12 +45,12 @@ body {
 
 .logo-box{
     position: absolute;
-    top: 40px;
-    left: 40px;
+    top: 4rem;
+    left: 4rem;
 }
 
 .logo{
-    height: 35px;
+    height: 3.5rem;
 
 }
 
@@ -55,7 +61,7 @@ body {
 }
 .text-box{
     position: absolute;
-    top: 40%;
+    top:40%;
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
@@ -65,14 +71,15 @@ body {
 .heading-primary{
     color: #fff;
     text-transform: uppercase;
-    margin-bottom: 60px;
+    margin-bottom: 6rem;
+    
 }
 
 .heading-primary-main{
     display: block;
-    font-size: 60px;
+    font-size: 6rem;
     font-weight: 400;
-    letter-spacing: 35px;
+    letter-spacing: 3.5rem;
 
     animation-name: moveInLeft;
     animation-duration: 1.5s;
@@ -82,9 +89,9 @@ body {
 
 .heading-primary-sub{
     display: block;
-    font-size: 20px;
+    font-size: 2rem;
     font-weight: 400;
-    letter-spacing: 17.4px;
+    letter-spacing: 1.7rem;
     font-weight: 700;
 
     animation-name: moveInRight;
@@ -96,33 +103,33 @@ body {
 @keyframes moveInLeft{
     from{
         opacity: 0;
-        transform: translate(-100px);
+        transform: translate(-10rem);
     }
 
     80%{
-        transform: translate(10px);
+        transform: translate(1rem);
 
     }
 
     to{
         opacity: 1;
-        transform: translate(0);
+        transform: translate(-1rem);
     }
 }
 
 @keyframes moveInRight{
     from{
         opacity: 0;
-        transform: translate(100px);
+        transform: translate(10rem);
     }
 
     80%{
-        transform: translate(-10px);
+        transform: translate(-2rem);
     }
 
     to{
         opacity: 1;
-        transform: translate(0);
+        transform: translate(-1rem);
     }
 }
 
@@ -144,10 +151,11 @@ body {
 .btn:visited{
 text-transform: uppercase;
 text-decoration: none;
-padding: 15px 40px;
+padding: 1.5rem 4rem;
 display: inline-block;
 transition: all .2s;
 position: relative;
+font-size: 1.6rem;
 }
 
 .btn::after{
@@ -155,7 +163,7 @@ position: relative;
     display: inline-block;
     height: 100%;
     width: 100%;
-    border-radius: 10px;
+    border-radius: 1rem;
     position: absolute;
 top: 0;
 left: 0;
@@ -170,21 +178,21 @@ transition: all .4s;
 
 
 .btn:hover{
-    transform: translateY(-4px);
-    box-shadow: 0 10px 20px;
+    transform: translateY(.4rem);
+    box-shadow: 0 1rem 2rem;
     box-shadow: transparent;
 }
 
 .btn:active{
-    transform: translateY(-1px);
-    box-shadow: 0 5px 5px;
+    transform: translateY(.1rem);
+    box-shadow: 0 .5rem .5rem;
     box-shadow: transparent;
 }
 
 .btn-white{
     background-color: #fff;
     color: #777;
-    border-radius: 10px;
+    border-radius: 1rem;
 
 }
 
@@ -195,7 +203,7 @@ transition: all .4s;
 @keyframes moveUp{
     from{
         opacity: 0;
-        transform: translatey(100px);
+        transform: translatey(10rem);
     }
 
     to{
